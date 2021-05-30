@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block content %}
+    <h1>디테일 페이지 입니다.</h1>
+    <h1>{{notice.title}}</h1>
+    <h1>{{notice.pub_date}}</h1>
+    <h1>{{notice.body}}</h1>
+    <a href="{% url 'home' %}">돌아가기</a>
+    <a href="{% url 'delete' notice.id %}">삭제</a>
+    <a href="{% url 'edit' notice.id %}">수정</a>
+{% endblock %}
